@@ -1,0 +1,11 @@
+- hosts: all
+  become: true
+  tasks:
+   - name: Install apache
+     include: apache.yaml
+   - name: Install php
+     include: php.yaml
+   - name: Download wordpress
+     include: app.yaml
+   - name: Install mysql-server
+     include: mysql.yaml  
